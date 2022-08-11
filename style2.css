@@ -1,0 +1,46 @@
+.dino {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background-image: url(img/jerzy3.png);
+    background-size: 51px 70px;
+    bottom: 0px;
+}
+
+.obstacle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url(img/shit3.png);
+    background-size: 40px 40px;
+    bottom: 0px;
+}
+
+@keyframes slideright {
+    from {
+        background-position: 70000%;
+    }
+    to {
+        background-position: 0%;
+    }
+}
+
+@-webkit-keyframes slideright {
+    from {
+        background-position: 70000%;
+    }
+    to {
+        background-position: 0%;
+    }
+}
+
+#desert {
+    position: absolute;
+    bottom: 0px;
+    background-image: url(img/background.png);
+    background-repeat: repeat-x;
+    animation: slideright 1000s infinite linear;
+    -webkit-animation: slideright 1000s infinite linear;
+    width: 100%;
+    height: 200px;
+}

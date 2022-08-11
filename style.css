@@ -1,3 +1,6 @@
+body {
+    margin-top: 100px;
+}
 .game {
     width: 600px;
     height: 200px;
@@ -5,26 +8,29 @@
     margin: auto;
     border: 1px solid black;
     background-image: url(img/background.png);
+    z-index: -11;
 }
 
 #dino {
     
     width: 50px;
-    height: 50px;
-    background-image: url(img/dino.png);
-    background-size: 20px 40px;
-    top: 140px;
-    padding-left: 2px;
+    height: 70px;
+    background-image: url(img/jerzy3.png);
+    background-size: 51px 70px;
+    top: 125px;
+    margin-left: 10px;
     position: relative;
+    z-index: 2;
 }
 #cactus {
     left: 570px;
     width: 30px;
-    height: 28px;
-    background-image: url(img/shit.png);
-    background-size: 30px 28px;
+    height: 30px;
+    background-image: url(img/shit3.png);
+    z-index: 1;
+    background-size: 30px 30px;
     position: relative;
-    top: 120px;
+    top: 100px;
 
     animation: cactusMov 2s infinite linear;
 }
@@ -44,18 +50,18 @@
 
 @keyframes jump {
     0% {
-        top: 140px;
+        top: 120px;
     }
     30% {
-        top: 110px;
+        top: 75px;
     }
     50% {
-        top: 60px;
+        top: 30px;
     }
     80% {
-        top: 110px;
+        top: 75px;
     }
     100% {
-        top: 140px;
+        top: 120px;
     }
 }

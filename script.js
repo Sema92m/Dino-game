@@ -1,5 +1,5 @@
-let dino = document.getElementById("dino");
-let cactus = document.getElementById("catus");
+const dino = document.getElementById("dino");
+const cactus = document.getElementById("catus");
 
 document.addEventListener("keydown", function (event) {
     jump();
@@ -14,16 +14,19 @@ function jump() {
     }, 500);
 }
 
+
+
 var isAlive = setInterval(function () {
     // if (!dino || !cactus) {
     //     return false;
     // }
-    var dinoTop = parseInt(
-        document.getComputedStyle(dino).getPropertyValue("top")
-    );
-    var cactusLeft = parseInt(
+    var dinoTop = 
+        window.getComputedStyle(dino).getPropertyValue("top")
+    ;
+    console.log(dinoTop);
+    var cactusLeft =
         window.getComputedStyle(cactus).getPropertyValue("left")
-    );
+    ;
 
     if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 130) {
         dino.style.animation = "none";
@@ -31,3 +34,7 @@ var isAlive = setInterval(function () {
         alert("Jerzy wjebał sie w gówno!");
     } 
 }, 10);
+
+
+
+  
