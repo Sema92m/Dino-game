@@ -17,13 +17,16 @@ function jump() {
 }
 
 let isAlive = setInterval(function () {
-    let dinoTop = window.getComputedStyle(dino).getPropertyValue("top");
-    let cactusLeft = cact.getPropertyValue("left");
-    if (cactusLeft < "105px" && cactusLeft > "0px" && (dinoTop == "125px" || dinoTop < "150px")) {
+    let dinoTop = parseInt(
+        window.getComputedStyle(dino).getPropertyValue("top")
+    );
+    let cactusLeft = parseInt(cact.getPropertyValue("left"));
+    if (cactusLeft <= 70 && dinoTop > 110) {
         newAlert.style.display = "block";
         dino.style.animationPlayState = "paused";
         cactus.style.animationPlayState = "paused";
         // alert("Jerzy wjebał sie w gówno!");
     }
+    // console.log(dinoTop);
     console.log(dinoTop);
 }, 10);

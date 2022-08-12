@@ -29,7 +29,7 @@ body {
     background-image: url(img/jerzy3.png);
     background-size: 50px 70px;
     top: 125px;
-    left: 80px;
+    left: 40px;
     position: relative;
     z-index: 2;
 }
