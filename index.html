@@ -4,23 +4,28 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="img/jerzy3.png">
+        <link rel="icon" type="image/x-icon" href="img/jerzy3.png" />
         <link rel="stylesheet" href="style.css" />
 
         <title>Jerzy Game</title>
     </head>
-    <body>
-        <div class="newAlert">
+    <body id="body">
+        <div class="counter" id="counter"></div>
+        <div class="timer">
+            <div class="seconds" id="seconds">0</div>
+        </div>
+        <div class="alert">
             <h3>Jerzy wjebał sie w gówno!</h3>
         </div>
-        
-        <div id="desert">
-            <h2 id="alert"></h2>
-            <div class="grid">
-                <div class="dino" id="dino"></div>
-                <div class="cactus" id="cactus"></div>
-            </div>
+
+        <!-- <div id="desert"> -->
+        <!-- <h2 id="alert"></h2> -->
+        <div class="grid">
+            <div class="dino" id="dino"></div>
+            <div class="cactus" id="cactus"></div>
         </div>
+
+        <!-- </div> -->
         <script src="script.js"></script>
     </body>
 </html>
