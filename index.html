@@ -4,19 +4,23 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="img/jerzy3.png">
-        <link rel="stylesheet" href="style2.css" />
+        <link rel="icon" type="image/x-icon" href="img/jerzy3.png" />
+        <link rel="stylesheet" href="style.css" />
 
         <title>Jerzy Game</title>
     </head>
-    <body>
-        <div id="desert">
-            <h2 id="alert"></h2>
-            <div class="grid">
-                <div class="dino" id="dino"></div>
-                <div id="cactus"></div>
+    <body id="body">
+        <div class="container">
+            <div class="timer">
+                <div class="seconds" id="seconds">0</div>
             </div>
+            <div class="alert">Jerzy wjebał sie w gówno!</div>
+            <button class="btn btn_refresh" onClick="window.location.reload()">
+                New game
+            </button>
+            <div class="dino" id="dino"></div>
+            <div class="cactus" id="cactus"></div>
         </div>
-        <script src="script2.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
