@@ -1,10 +1,36 @@
-body {
+.container {
+    position: relative;
+    width: 600px;
+    height: 200px;
     display: flex;
-    min-height: 900px;
     flex-direction: row;
     justify-content: center;
     margin-top: 20px;
-    position: relative;
+    border-bottom: 1px solid black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    background-image: url(img/background.png);
+}
+
+#dino {
+    width: 50px;
+    height: 70px;
+    position: absolute;
+    top: 125px;
+    left: 35px;
+    background-image: url(img/jerzy3.png);
+    background-size: 50px 70px;
+}
+#cactus {
+    position: absolute;
+    left: 570px;
+    width: 40px;
+    height: 40px;
+    top: 162px;
+    background-image: url(img/shit3.png);
+    background-size: 40px 40px;
+    animation: cactusMov 2s infinite linear;
 }
 .alert {
     position: absolute;
@@ -12,40 +38,7 @@ body {
     color: red;
     font-weight: bold;
     display: none;
-    top: 70px;
-}
-.grid {
-    width: 600px;
-    height: 200px;
-    border-bottom: 1px solid black;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border: 1px solid black;
-    background-image: url(img/background.png);
-    z-index: -11;
-}
-
-#dino {
-    width: 50px;
-    height: 70px;
-    background-image: url(img/jerzy3.png);
-    background-size: 50px 70px;
-    top: 125px;
-    left: 40px;
-    position: relative;
-    z-index: 2;
-}
-#cactus {
-    left: 570px;
-    width: 40px;
-    height: 40px;
-    background-image: url(img/shit3.png);
-    z-index: 1;
-    background-size: 40px 40px;
-    position: relative;
-    top: 95px;
-
-    animation: cactusMov 2s infinite linear;
+    top: 50px;
 }
 
 .btn_refresh {
@@ -53,8 +46,8 @@ body {
     position: absolute;
     width: 110px;
     height: 40px;
-    top: 60px;
-    right: 270px;
+    top: 15px;
+    right: 10px;
     padding: 0;
     font-size: 20px;
     border-radius: 9px;
@@ -63,6 +56,14 @@ body {
 
 .jump {
     animation: jump 1s linear;
+}
+
+.timer {
+    position: absolute;
+    top: 15px;
+}
+#seconds {
+    font-size: 2em;
 }
 
 @keyframes jump {
@@ -88,53 +89,31 @@ body {
         left: -5px;
     }
 }
-.timer {
-    display: flex;
-    position: absolute;
-    top: 65px;
-}
-#seconds {
-    font-size: 2em;
-}
-
-#minutes {
-    font-size: 2em;
-}
-#colon {
-    font-size: 2em;
-}
 
 /* MEDIA */
 
 @media (max-width: 360px) {
-    body {
-        display: block;
-        margin-left: 10px;
-        margin-top: 5px;
-    }
-    .grid {
+    
+    .container {
         width: 340px;
         border: none;
-        margin: 0;
+        margin-top: 30px;
     }
     .alert {
         position: absolute;
-        left: 50px;
         font-size: 20px;
-        top: 55px;
+        top: 75px;
     }
-    #dino {
-        top: 125px;
-        left: 40px;
-    }
-    .timer {
-        top: 15px;
-        left: 150px;
+    
+    #cactus {
+        left: 300px;
     }
     .btn_refresh {
+        width: 80px;
+        height: 30px;
         top: 15px;
         right: 15px;
-        font-size: 17px;
+        font-size: 14px;
         border-radius: 5px;
     }
 
@@ -150,11 +129,7 @@ body {
         }
     }
 
-    #cactus {
-        left: 300px;
-        top: 93px;
-        animation: cactusMov 2s infinite linear;
-    }
+    
 
     @keyframes cactusMov {
         0% {
