@@ -1,15 +1,15 @@
 const dino = document.getElementById("dino");
 const cactus = document.getElementById("cactus");
 const alert = document.querySelector(".alert");
+const btn = document.querySelector(".btn_refresh");
 
-//с этим участком работает пробел на версии мобильной
+//с этим участком работает touch на версии мобильной
 const touchedElement = document.getElementById("body");
 touchedElement.addEventListener("touchstart", funcTouchStart, false);
 function funcTouchStart() {
     jump();
 }
 //^
-
 
 document.addEventListener("keypress", function (event) {
     jump();
@@ -35,29 +35,17 @@ let isAlive = setInterval(function () {
         alert.style.display = "block";
         dino.style.animationPlayState = "paused";
         cactus.style.animationPlayState = "paused";
-        // clearInterval(setTime);
+        btn.style.display = "block";
+        clearInterval(timer);
     }
 }, 10);
 
+//Timer
 let secondsLabel = document.getElementById("seconds");
 let totalSeconds = 0;
-setInterval(setTime, 1000);
-
+let timer = setInterval(setTime, 1000);
 function setTime() {
     ++totalSeconds;
     secondsLabel.innerHTML = (totalSeconds % 60) + "";
 }
 
-// function myStopFunction() {
-//     clearInterval(setTime);
-// }
-
-
-
-function startup() {
-    var el = document.querySelector("body");
-    el.addEventListener("touchstart", handleStart, false);
-    el.addEventListener("touchend", handleEnd, false);
-    el.addEventListener("touchcancel", handleCancel, false);
-    el.addEventListener("touchmove", handleMove, false);
-  }
