@@ -5,14 +5,16 @@ const btn = document.querySelector(".btn_refresh");
 
 //с этим участком работает touch на версии мобильной
 const touchedElement = document.getElementById("body");
-touchedElement.addEventListener("touchstart", funcTouchStart, false);
+touchedElement.addEventListener("touchstart", funcTouchStart, true);
 function funcTouchStart() {
     jump();
 }
 //^
-
+document.addEventListener("click", function (event) {
+    jump();//mouseclick
+});
 document.addEventListener("keypress", function (event) {
-    jump();
+    jump();//keyboard any keypress (except shift,ctrl,tab,exc ext)
 });
 
 function jump() {
@@ -24,21 +26,21 @@ function jump() {
     }, 1000);
 }
 
-let isAlive = setInterval(function () {
-    let dinoTop = parseInt(
-        window.getComputedStyle(dino).getPropertyValue("top")
-    );
-    let cactusLeft = parseInt(
-        window.getComputedStyle(cactus).getPropertyValue("left")
-    );
-    if (cactusLeft <= 70 && dinoTop > 110 && cactusLeft > 20) {
-        alert.style.display = "block";
-        dino.style.animationPlayState = "paused";
-        cactus.style.animationPlayState = "paused";
-        btn.style.display = "block";
-        clearInterval(timer);
-    }
-}, 10);
+// let isAlive = setInterval(function () {
+//     let dinoTop = parseInt(
+//         window.getComputedStyle(dino).getPropertyValue("top")
+//     );
+//     let cactusLeft = parseInt(
+//         window.getComputedStyle(cactus).getPropertyValue("left")
+//     );
+//     if (cactusLeft <= 70 && dinoTop > 110 && cactusLeft > 20) {
+//         alert.style.display = "block";
+//         dino.style.animationPlayState = "paused";
+//         cactus.style.animationPlayState = "paused";
+//         btn.style.display = "block";
+//         clearInterval(timer);
+//     }
+// }, 10);
 
 //Timer
 let secondsLabel = document.getElementById("seconds");

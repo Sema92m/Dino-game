@@ -1,5 +1,5 @@
-body{
-    min-height: 900px;
+body {
+    min-height: 500px;
 }
 .container {
     position: relative;
@@ -9,13 +9,24 @@ body{
     flex-direction: row;
     justify-content: center;
     margin-top: 20px;
-    border-bottom: 1px solid black;
     margin-top: 50px;
     margin-bottom: 50px;
-    border: 1px solid black;
-    background-image: url(img/background.png);
 }
-
+#background {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("img/background.png");
+    background-repeat: repeat;
+    background-size: auto 100%;
+    animation: backgroundMove 150s linear infinite;
+}
+@keyframes backgroundMove {
+    to {
+        background-position: -10000px 0;
+    }
+}
 #dino {
     width: 50px;
     height: 70px;
@@ -27,7 +38,7 @@ body{
 }
 #cactus {
     position: absolute;
-    left: 570px;
+    right: 20px;
     width: 40px;
     height: 40px;
     top: 162px;
@@ -35,6 +46,25 @@ body{
     background-size: 40px 40px;
     animation: cactusMov 2s infinite linear;
 }
+#sun {
+    position: absolute;
+    top: -85px;
+    left: 10px;
+    width: 250px;
+    height: 250px;
+    scale: 0.25;
+    background-image: url("img/Sun.png");
+    animation: sunTurn 3s infinite linear;
+}
+@keyframes sunTurn {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(36deg);
+    }
+}
+
 .alert {
     position: absolute;
     font-size: 30px;
@@ -94,7 +124,55 @@ body{
 }
 
 /* MEDIA */
+@media (max-width: 480px) {
+    .container {
+        width: 460px;
+        border: none;
+        margin-top: 30px;
+        background-image: url(img/background.png) cover;
+    }
+    .alert {
+        position: absolute;
+        font-size: 20px;
+        top: 75px;
+    }
 
+    #cactus {
+        left: 300px;
+    }
+    .btn_refresh {
+        width: 80px;
+        height: 30px;
+        top: 15px;
+        right: 15px;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+    @keyframes jump {
+        0% {
+            top: 125px;
+        }
+        50% {
+            top: 55px;
+        }
+        100% {
+            top: 125px;
+        }
+    }
+
+    @keyframes cactusMov {
+        0% {
+            left: 300px;
+        }
+        50% {
+            left: 150px;
+        }
+        100% {
+            left: -5px;
+        }
+    }
+}
 @media (max-width: 360px) {
     .container {
         width: 340px;
