@@ -1,0 +1,38 @@
+@keyframes backgroundMove {
+    to {
+        background-position: -10000px 0;
+    }
+}
+
+@keyframes sunTurn {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(36deg);
+    }
+}
+
+@keyframes jump {
+    0% {
+        top: 125px;
+    }
+    50% {
+        top: 30px;
+    }
+    100% {
+        top: 125px;
+    }
+}
+
+@keyframes cactusMov {
+    0% {
+        left: 560px;
+    }
+    50% {
+        left: 220px;
+    }
+    100% {
+        left: -5px;
+    }
+}
