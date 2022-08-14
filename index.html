@@ -6,10 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/x-icon" href="img/jerzy3.png" />
         <link rel="stylesheet" href="style.css" />
-
+        <audio webkit-playsinline="true"
+        playsinline="true" autoplay="" loop
+            id="audio_bg"
+            src="audio/backgroundmusic.mp3"
+            type="audio/mp3"
+            
+        ></audio>
         <title>Jerzy Game</title>
     </head>
     <body id="body">
+        
+        <audio id="audio_jump" src="audio/score.mp3"></audio>
         <div class="container">
             <div id="background"></div>
             <div id="sun"></div>
@@ -22,6 +30,8 @@
             </button>
             <div class="dino" id="dino"></div>
             <div class="cactus" id="cactus"></div>
+
+            
         </div>
         <script src="script.js"></script>
     </body>

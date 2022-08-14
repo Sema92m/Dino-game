@@ -2,19 +2,25 @@ const dino = document.getElementById("dino");
 const cactus = document.getElementById("cactus");
 const alert = document.querySelector(".alert");
 const btn = document.querySelector(".btn_refresh");
+const background = document.getElementById("background");
+const audioJump = document.getElementById("audio_jump");
 
 //с этим участком работает touch на версии мобильной
 const touchedElement = document.getElementById("body");
 touchedElement.addEventListener("touchstart", funcTouchStart, true);
 function funcTouchStart() {
     jump();
+    audioJump.play();
 }
 //^
+
 document.addEventListener("click", function (event) {
-    jump();//mouseclick
+    jump();
+    audioJump.play(); //mouseclick
 });
 document.addEventListener("keypress", function (event) {
-    jump();//keyboard any keypress (except shift,ctrl,tab,exc ext)
+    jump();
+    audioJump.play(); //keyboard any keypress (except shift,ctrl,tab,exc ext)
 });
 
 function jump() {
@@ -37,6 +43,7 @@ let isAlive = setInterval(function () {
         alert.style.display = "block";
         dino.style.animationPlayState = "paused";
         cactus.style.animationPlayState = "paused";
+        background.style.animationPlayState = "paused";
         btn.style.display = "block";
         clearInterval(timer);
     }
@@ -50,4 +57,3 @@ function setTime() {
     ++totalSeconds;
     secondsLabel.innerHTML = (totalSeconds % 60) + "";
 }
-
