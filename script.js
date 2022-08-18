@@ -16,11 +16,13 @@ function funcTouchStart() {
 
 document.addEventListener("click", function (event) {
     jump();
-    audioJump.play(); //mouseclick
+    audioJump.play();
+     //mouseclick
 });
 document.addEventListener("keypress", function (event) {
     jump();
-    audioJump.play(); //keyboard any keypress (except shift,ctrl,tab,exc ext)
+    audioJump.play();
+     //keyboard any keypress (except shift,ctrl,tab,exc ext)
 });
 
 function jump() {
@@ -29,6 +31,7 @@ function jump() {
     }
     setTimeout(function () {
         dino.classList.remove("jump");
+        
     }, 1000);
 }
 

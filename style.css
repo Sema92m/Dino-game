@@ -1,23 +1,19 @@
-
-
 body {
     min-height: 500px;
+    margin: 0;
 }
 .container {
     position: relative;
-    width: 600px;
+    width: 100vw;
     height: 200px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 5vw 0;
 }
 #background {
     position: absolute;
-    left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background: url("img/background.png");
     background-repeat: repeat;
@@ -35,7 +31,7 @@ body {
 }
 #cactus {
     position: absolute;
-    right: 20px;
+    right: 5vw;
     width: 40px;
     height: 40px;
     top: 162px;
@@ -45,32 +41,31 @@ body {
 }
 #sun {
     position: absolute;
-    top: -85px;
-    left: 10px;
-    width: 250px;
-    height: 250px;
-    scale: 0.25;
+    left: 15vw;
+    width: 85px;
+    height: 85px;
+    background-size: 85px 85px;
     background-image: url("img/Sun.png");
     animation: sunTurn 3s infinite linear;
 }
 .alert {
     position: absolute;
-    font-size: 30px;
+    font-size: 3vh;
     color: red;
     font-weight: bold;
     display: none;
-    top: 50px;
+    top: 100px;
 }
 .btn_refresh {
     display: none;
     position: absolute;
-    width: 110px;
-    height: 40px;
-    top: 15px;
-    right: 10px;
+    width: 16vh;
+    height: 6vh;
+    top: 5vw;
+    right: 5vw;
     padding: 0;
-    font-size: 20px;
-    border-radius: 9px;
+    font-size: 3vh;
+    border-radius: 5px;
     background-color: rgb(236, 235, 235);
 }
 .jump {
@@ -78,7 +73,7 @@ body {
 }
 .timer {
     position: absolute;
-    top: 15px;
+    top: 7vw;
 }
 #seconds {
     font-size: 2em;
@@ -112,176 +107,12 @@ body {
 
 @keyframes cactusMov {
     0% {
-        left: 560px;
+        left: 93vw;
     }
     50% {
-        left: 220px;
+        left: 50vw;
     }
     100% {
-        left: -5px;
-    }
-}
-
-/* MEDIA */
-@media (max-width: 768px) {
-    .alert {
-        position: absolute;
-        font-size: 20px;
-        top: 85px;
-        left: 120px;
-    }
-    #cactus {
-        left: 420px;
-    }
-    #sun {
-        left: -25px;
-        top: -85px;
-    }
-    .timer {
-        left: 225px;
-        top: 40px;
-    }
-    .btn_refresh {
-        width: 80px;
-        height: 30px;
-        top: 15px;
-        right: 130px;
-        font-size: 14px;
-        border-radius: 5px;
-    }
-
-    @keyframes jump {
-        0% {
-            top: 125px;
-        }
-        50% {
-            top: 55px;
-        }
-        100% {
-            top: 125px;
-        }
-    }
-
-    @keyframes cactusMov {
-        0% {
-            left: 420px;
-        }
-        50% {
-            left: 150px;
-        }
-        100% {
-            left: -5px;
-        }
-    }
-}
-@media (max-width: 480px) {
-    .container {
-        width: 95vw;
-        margin-top: 30px;
-    }
-    .alert {
-        position: absolute;
-        font-size: 20px;
-        top: 75px;
-        left: 80px;
-    }
-    #cactus {
-        left: 420px;
-    }
-    #sun {
-        left: -25px;
-        top: -95px;
-    }
-    .timer {
-        left: 180px;
-        top: 40px;
-    }
-    .btn_refresh {
-        width: 80px;
-        height: 30px;
-        top: 15px;
-        left: 255px;
-        font-size: 14px;
-        border-radius: 5px;
-    }
-
-    @keyframes jump {
-        0% {
-            top: 125px;
-        }
-        50% {
-            top: 55px;
-        }
-        100% {
-            top: 125px;
-        }
-    }
-
-    @keyframes cactusMov {
-        0% {
-            left: 420px;
-        }
-        50% {
-            left: 150px;
-        }
-        100% {
-            left: -5px;
-        }
-    }
-}
-
-@media (max-width: 360px) {
-    .container {
-        width: 95vw;
-        margin-top: 30px;
-    }
-    .alert {
-        position: absolute;
-        font-size: 20px;
-        top: 75px;
-        left: 20px;
-    }
-    #cactus {
-        left: 420px;
-    }
-    #sun {
-        left: -90px;
-        top: -90px;
-    }
-    .timer {
-        left: 120px;
-        top: 40px;
-    }
-    .btn_refresh {
-        width: 80px;
-        height: 30px;
-        top: 15px;
-        left: 170px;
-        font-size: 14px;
-        border-radius: 5px;
-    }
-
-    @keyframes jump {
-        0% {
-            top: 125px;
-        }
-        50% {
-            top: 45px;
-        }
-        100% {
-            top: 125px;
-        }
-    }
-
-    @keyframes cactusMov {
-        0% {
-            left: 300px;
-        }
-        50% {
-            left: 150px;
-        }
-        100% {
-            left: -5px;
-        }
+        left: -3vw;
     }
 }
